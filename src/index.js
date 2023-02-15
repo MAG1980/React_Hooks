@@ -11,10 +11,16 @@ root.render(
   </React.StrictMode>
 );*/
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const GREEN = "green"
+
+/*ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <App/>
+        <App color={color}/>
     </React.StrictMode>
+)*/
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+React.createElement(App, { color: GREEN},  /*[...children]*/ )
 )
 
 // If you want to start measuring performance in your app, pass a function
