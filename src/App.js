@@ -2,13 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import {HelloWorld} from "./components/HelloWorld";
 import {Label} from "./components/Label";
+import {Form} from "./components/Form";
 
 function App({color}) {
     const BLUE = "blue"
     console.log(color, BLUE)
     return (
         <div className="App">
-            <header className="App-header">
+{/*            <header className="App-header">
                 <h1  style={{color}}>Title</h1>
                 <img src={logo} className="App-logo" alt="logo"/>
                 <HelloWorld color={BLUE}/>
@@ -16,7 +17,8 @@ function App({color}) {
                     <p>Введите текст</p>
                     <input/>
                 </Label>
-            </header>
+            </header>*/}
+            <Form />
         </div>
     );
 }
