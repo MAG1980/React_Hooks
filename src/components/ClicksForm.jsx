@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const initState = 0;
-export const Form = () => {
+export const ClicksForm = () => {
     const [clicks, setClicks] = useState(initState);
 
     //Благодаря использованию callback-функции в качестве аргумента сеттера, всегда работаем с актуальным занчением state,

@@ -2,7 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import {HelloWorld} from "./components/HelloWorld";
 import {Label} from "./components/Label";
-import {Form} from "./components/Form";
+import {ClicksForm} from "./components/ClicksForm";
+import {ExampleForm} from "./components/ExampleForm";
+import {ClicksCounterOnCustomHook} from "./components/ClicksCounterOnCustomHook"
 
 function App({color}) {
     const BLUE = "blue"
@@ -18,7 +20,9 @@ function App({color}) {
                     <input/>
                 </Label>
             </header>*/}
-            <Form />
+            <ClicksForm />
+            <ExampleForm />
+            <ClicksCounterOnCustomHook />
         </div>
     );
 }
