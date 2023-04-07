@@ -1,7 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import {HelloWorld} from "./components/HelloWorld";
-import {Label} from "./components/Label";
 import {ClicksForm} from "./components/ClicksForm";
 import {ExampleForm} from "./components/ExampleForm";
 import {ClicksCounterOnCustomHook} from "./components/ClicksCounterOnCustomHook"
@@ -20,9 +17,9 @@ function App({color}) {
                     <input/>
                 </Label>
             </header>*/}
-            <ClicksForm />
-            <ExampleForm />
-            <ClicksCounterOnCustomHook />
+            <ClicksForm/>
+            <ExampleForm/>
+            <ClicksCounterOnCustomHook/>
         </div>
     );
 }
