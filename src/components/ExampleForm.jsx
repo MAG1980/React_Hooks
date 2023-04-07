@@ -7,21 +7,37 @@ const initState = {
 }
 
 export const ExampleForm = () => {
-    const [name, setName] = useState(initState.name)
-    const [surname, setSurname] = useState(initState.surname)
-    const [age, setAge] = useState(initState.age)
     const [formData, setFormData] = useState(initState);
 
-    const saveFormDataToState = (target) => {
-        target.preventDefault()
-        setFormData({
-            name,
-            surname,
-            age
+    const setName = (name) => {
+        setFormData((prevState) => {
+            return {
+                ...prevState,
+                name
+            }
         })
-        setName('')
-        setSurname('')
-        setAge(21)
+    }
+
+    const setSurname = (surname) => {
+        setFormData((prevState) => {
+            return {
+                ...prevState,
+                surname
+            }
+        })
+    }
+
+    const setAge = (age) => {
+        setFormData((prevState) => {
+            return {
+                ...prevState,
+                age
+            }
+        })
+    }
+
+    const clear = () => {
+        setFormData(initState)
     }
 
     return (
@@ -41,7 +57,7 @@ export const ExampleForm = () => {
                 <input
                     type="text"
                     name='name'
-                    value={name}
+                    value={formData.name}
                     onChange={(event) => {
                         console.log(event.target.value)
                         setName(event.target.value)
@@ -50,17 +66,17 @@ export const ExampleForm = () => {
                 <input
                     type='text'
                     name='surname'
-                    value={surname}
+                    value={formData.surname}
                     onChange={(event) => setSurname(event.target.value)}
                 />
                 <input
                     type="number"
                     name='age'
-                    value={age}
+                    value={formData.age}
                     onChange={(event) => setAge(parseInt(event.target.value))}
                 />
-                <button onClick={saveFormDataToState}>
-                    Сохранить
+                <button onClick={clear}>
+                    Очистить
                 </button>
             </form>
 
