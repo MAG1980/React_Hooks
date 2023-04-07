@@ -50,7 +50,7 @@ export const ExampleForm = () => {
                     type="number"
                     name='age'
                     value={mergedState.age}
-                    onChange={(event) => mergeState({age:parseInt(event.target.value)})}
+                    onChange={(event) => mergeState({age: (event.target.value ? parseInt(event.target.value) : initState.age)})}
                 />
                 <button onClick={clear}>
                     Очистить

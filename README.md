@@ -30,6 +30,23 @@ const rerender = ()=>{setTrigger({})}
 
 
 
+Создание функций, которые возвращают callback, позволяет не использовать анонимный callback в JSX и сделает код более аккуратным:
+    const OnChange = (setter) => {
+        return (event) => {
+            const {value} = event.target.value
+            setter(value ? parseFloat(value) : 0)
+        }
+    }
+
+<input onChange = {OnChange(setA)} />
+
+
+Для сохранения функции в state используем callback,
+ возвращающий функцию, но не вызываем её (callback возвращает ссылку на функцию)
+    const [action, setAction] = useState(() => add);
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
