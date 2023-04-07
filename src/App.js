@@ -2,6 +2,7 @@ import './App.css';
 import {ClicksForm} from "./components/ClicksForm";
 import {ExampleForm} from "./components/ExampleForm";
 import {ClicksCounterOnCustomHook} from "./components/ClicksCounterOnCustomHook"
+import {Calculator} from "./components/Calculator";
 
 function App({color}) {
     const BLUE = "blue"
@@ -20,6 +21,7 @@ function App({color}) {
             <ClicksForm/>
             <ExampleForm/>
             <ClicksCounterOnCustomHook/>
+            <Calculator/>
         </div>
     );
 }
