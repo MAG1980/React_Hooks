@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useMergedState} from "../hooks/useMergedState";
 
 const initState = {
     name: '',
@@ -7,37 +7,10 @@ const initState = {
 }
 
 export const ExampleForm = () => {
-    const [formData, setFormData] = useState(initState);
-
-    const setName = (name) => {
-        setFormData((prevState) => {
-            return {
-                ...prevState,
-                name
-            }
-        })
-    }
-
-    const setSurname = (surname) => {
-        setFormData((prevState) => {
-            return {
-                ...prevState,
-                surname
-            }
-        })
-    }
-
-    const setAge = (age) => {
-        setFormData((prevState) => {
-            return {
-                ...prevState,
-                age
-            }
-        })
-    }
+    const [mergedState, mergeState] = useMergedState(initState);
 
     const clear = () => {
-        setFormData(initState)
+        mergeState(initState)
     }
 
     return (
@@ -57,23 +30,27 @@ export const ExampleForm = () => {
                 <input
                     type="text"
                     name='name'
-                    value={formData.name}
+                    value={mergedState.name}
                     onChange={(event) => {
                         console.log(event.target.value)
-                        setName(event.target.value)
+                        mergeState({name:event.target.value})
+                        console.log(mergedState)
                     }}
                 />
                 <input
                     type='text'
                     name='surname'
-                    value={formData.surname}
-                    onChange={(event) => setSurname(event.target.value)}
+                    value={mergedState.surname}
+                    onChange={(event) => {
+                        mergeState({surname: event.target.value})
+                        console.log(mergedState)
+                    }}
                 />
                 <input
                     type="number"
                     name='age'
-                    value={formData.age}
-                    onChange={(event) => setAge(parseInt(event.target.value))}
+                    value={mergedState.age}
+                    onChange={(event) => mergeState({age:parseInt(event.target.value)})}
                 />
                 <button onClick={clear}>
                     Очистить
@@ -81,10 +58,11 @@ export const ExampleForm = () => {
             </form>
 
             <div>
-                <p>Имя: {formData.name}</p>
-                <p>Фамилия: {formData.surname}</p>
-                <p>Возраст: {formData.age}</p>
+                <p>Имя: {mergedState.name}</p>
+                <p>Фамилия: {mergedState.surname}</p>
+                <p>Возраст: {mergedState.age}</p>
             </div>
         </div>
     )
 }
+
