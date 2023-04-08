@@ -39,6 +39,11 @@ export const CounterWithSideEffect = () => {
             console.log(`<< cleaning up ${counter}`)
         }
     },[counter])
+
+        //Выполняется после каждого рендера, т.к. отсутствует массив зависимостей
+    useEffect(()=>{
+        console.log("Executed after EACH render!")
+    })
     return (
         <>
             <p>Current count: {counter}</p>
