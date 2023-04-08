@@ -1,5 +1,6 @@
 import {useCounter} from "../hooks/useCounter";
 import {useEffect} from "react";
+import {logDOM} from "@testing-library/react";
 
 //Имитирует асинхронный ответ сервера
 const updateClicksCount = (clicksCount) => {
@@ -29,6 +30,15 @@ export const CounterWithSideEffect = () => {
         }
         update()
     }, [counter])
+
+    //useEffect с функцией очистки
+    useEffect(()=>{
+        console.log(`>> running effect ${counter}`)
+        return ()=> {
+            //cleanUp-function
+            console.log(`<< cleaning up ${counter}`)
+        }
+    },[counter])
     return (
         <>
             <p>Current count: {counter}</p>
