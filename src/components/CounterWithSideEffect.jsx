@@ -1,9 +1,10 @@
 import {useCounter} from "../hooks/useCounter";
 import {useEffect} from "react";
 
-const updateClicksCount = (clicksCount)=>{
-    return new Promise((resolve) =>{
-        setTimeout (()=>{
+//Имитирует асинхронный ответ сервера
+const updateClicksCount = (clicksCount) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
             resolve({
                 success: true,
                 clicksCount
@@ -15,9 +16,19 @@ const updateClicksCount = (clicksCount)=>{
 export const CounterWithSideEffect = () => {
     const [counter, increment, decrement] = useCounter(0, 1)
 
-    useEffect(()=>{
+    //Обновление поля title HTML
+    useEffect(() => {
         document.title = `Counter №${counter}`
-    },[counter])
+    }, [counter])
+
+    //Отправка нового значения счётчика на сервер и получение ответа
+    useEffect(() => {
+        const update = async () => {
+            const response = await updateClicksCount(counter)
+            console.log(response)
+        }
+        update()
+    }, [counter])
     return (
         <>
             <p>Current count: {counter}</p>
