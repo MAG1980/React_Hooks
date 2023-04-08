@@ -1,8 +1,8 @@
 import {useCounter} from "../hooks/useCounter";
 
 const delta = 3
-export const ClicksCounterOnCustomHook = ({initValue}) => {
-    const [counter, increment, decrement] = useCounter({initValue, delta})
+export const ClicksCounterOnCustomHook = ({initValue, delta}) => {
+    const [counter, increment, decrement] = useCounter(initValue, delta)
     return (
         <form>
             <h3>{counter}</h3>
