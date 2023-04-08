@@ -1,6 +1,17 @@
 import {useCounter} from "../hooks/useCounter";
 import {useEffect} from "react";
 
+const updateClicksCount = (clicksCount)=>{
+    return new Promise((resolve) =>{
+        setTimeout (()=>{
+            resolve({
+                success: true,
+                clicksCount
+            })
+        }, 1000)
+    })
+
+}
 export const CounterWithSideEffect = () => {
     const [counter, increment, decrement] = useCounter(0, 1)
 
