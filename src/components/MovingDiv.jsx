@@ -1,5 +1,5 @@
 import {usePosition} from "../hooks/usePosition";
-import {useState, useLayoutEffect} from "react";
+import {useState, useLayoutEffect, useMemo} from "react";
 
 const initialStyle = {
     backgroundColor: '#F00',
@@ -19,21 +19,33 @@ const generateDummies = (count) => {
 }
 export const MovingDiv = () => {
     const [left, top] = usePosition(50)
-    const [style, setStyle] = useState(initialStyle);
+    // const [style, setStyle] = useState(initialStyle);
 
-    useLayoutEffect(() => {
-        setStyle((prevState) => {
-            return {
-                ...prevState,
-                left,
-                top
-            }
+
+    //Ссылка на объект style будет сохраняться между рендерами.
+    //Изменения в объекте style будут происходить
+    //только при изменении значений переменных в массиве зависимостей хука useMemo.
+    const style = useMemo(() => {
+        return {
+            ...initialStyle,
+            left,
+            top
         }
-    )
+    }, [left, top]);
+
+/*    useLayoutEffect(() => {
+        setStyle((prevState) => {
+                return {
+                    ...prevState,
+                    left,
+                    top
+                }
+            }
+        )
         return () => {
 
         };
-    }, [left, top]);
+    }, [left, top]);*/
 
 
     return (
