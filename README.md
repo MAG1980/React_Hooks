@@ -142,6 +142,9 @@ useLayoutEffect используется в основном,
 В отличие от метода componentDidUpdate(), хук useRef() cрабатывает и на первый ренедер.
 
 
+Хук useCallback применяется для мемоизации функции,
+который в качестве параметров принимает callback и массив зависимостей,
+при изменении которых ссылка на callback будет обновлена.
 
 # Getting Started with Create React App
 

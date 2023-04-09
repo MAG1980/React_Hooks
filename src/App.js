@@ -6,6 +6,7 @@ import {Calculator} from "./components/Calculator";
 import {CounterWithSideEffect} from "./components/CounterWithSideEffect";
 import {MovingDiv} from "./components/MovingDiv";
 import {UseRefExample} from "./components/useRefExample";
+import {MemoizedCallback} from "./components/MemoizedCallback";
 
 function App({color}) {
     const BLUE = "blue"
@@ -21,6 +22,7 @@ function App({color}) {
                     <input/>
                 </Label>
             </header>*/}
+            <MemoizedCallback/>
             <UseRefExample/>
             <ClicksForm/>
             <ExampleForm/>
