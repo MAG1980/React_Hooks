@@ -139,6 +139,8 @@ useLayoutEffect используется в основном,
 Разница с хуком useState заключается в том,
 что изменение значения useRef не вызывает ререндер компонента. 
 
+В отличие от метода componentDidUpdate(), хук useRef() cрабатывает и на первый ренедер.
+
 
 
 # Getting Started with Create React App
