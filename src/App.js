@@ -5,6 +5,7 @@ import {ClicksCounterOnCustomHook} from "./components/ClicksCounterOnCustomHook"
 import {Calculator} from "./components/Calculator";
 import {CounterWithSideEffect} from "./components/CounterWithSideEffect";
 import {MovingDiv} from "./components/MovingDiv";
+import {UseRefExample} from "./components/useRefExample";
 
 function App({color}) {
     const BLUE = "blue"
@@ -20,6 +21,7 @@ function App({color}) {
                     <input/>
                 </Label>
             </header>*/}
+            <UseRefExample/>
             <ClicksForm/>
             <ExampleForm/>
             <ClicksCounterOnCustomHook initValue={10} delta={2}/>
