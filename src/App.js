@@ -8,6 +8,8 @@ import {MovingDiv} from "./components/MovingDiv";
 import {UseRefExample} from "./components/useRefExample";
 import {MemoizedCallback} from "./components/MemoizedCallback";
 import {MasterDetail} from "./components/MasterDetail";
+import {PinInput} from "./components/PinInput";
+import {PinInputParent} from "./components/PinInputParent";
 
 const content = {
     chapter_1:{name:'ClicksForm', component:ClicksForm},
@@ -18,6 +20,7 @@ const content = {
     chapter_6:{name:'MovingDiv', component:MovingDiv},
     chapter_7:{name:'UseRefExample', component:UseRefExample},
     chapter_8:{name:'MemoizedCallback', component:MemoizedCallback},
+    chapter_9:{name:'PinInput', component:PinInputParent},
 }
 
 function App({color}) {
