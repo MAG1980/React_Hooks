@@ -10,6 +10,7 @@ import {MemoizedCallback} from "./components/MemoizedCallback";
 import {MasterDetail} from "./components/MasterDetail";
 import {PinInput} from "./components/PinInput";
 import {PinInputParent} from "./components/PinInputParent";
+import {SimpleTextWithLogRender} from "./components/SimpleTextWithLogRender";
 
 const content = {
     chapter_1:{name:'ClicksForm', component:ClicksForm},
@@ -21,6 +22,7 @@ const content = {
     chapter_7:{name:'UseRefExample', component:UseRefExample},
     chapter_8:{name:'MemoizedCallback', component:MemoizedCallback},
     chapter_9:{name:'PinInput', component:PinInputParent},
+    chapter_10:{name:'SimpleTextWithLogRender', component:SimpleTextWithLogRender},
 }
 
 function App({color}) {
