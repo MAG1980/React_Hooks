@@ -6,7 +6,7 @@ export const SimpleTextWithLogRender = () => {
     const LoggedSimpleText = withLogRender(SimpleText)
     return (
         <p>
-            <LoggedSimpleText text='Test text' />
+            <LoggedSimpleText text="Some text"/>
         </p>
     )
 }
