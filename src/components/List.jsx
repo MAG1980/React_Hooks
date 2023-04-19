@@ -28,8 +28,10 @@ export const List = ({items}) => {
            /*     При каждом рендере компонента создаётся новый callback onItemClick,
                 который затем передаётся всем дочерним компонентам.
                 Все дочерние компоненты будут рендериться заново на каждый рендер компонента List,
-                т.к. будет изменяться ссылка на их props onItemClick.
+                даже если List будет PureComponent,
+                т.к. будут изменяться ссылки на их props onItemClick.
                 Чтобы этого избежать следует мемоизировать onItemClick, обернув его в useCallback.
+                Это позволит сохранить ссылку на onItemClick при ререндере List.
                 */
                 <ListItem key={item.id} item={item} onClick={onItemClick}/>
             ))}

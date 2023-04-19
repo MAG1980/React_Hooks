@@ -3,7 +3,8 @@ export const ListItem = ({item, onClick}) => {
     console.log(`> render ${name}`)
 
     return (
-        //В данном случае использовать useCallback нет необходимости.
+        //В данном случае использовать useCallback нет необходимости,
+        // т.к. callback используется именно в этом компоненте.
         <div onClick={()=>onClick(item)}>
             {name}
         </div>
