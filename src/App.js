@@ -12,6 +12,7 @@ import {PinInput} from "./components/PinInput";
 import {PinInputParent} from "./components/PinInputParent";
 import {WithLogRender} from "./components/WithLogRender";
 import {UseCallbackExample} from "./components/UseCallbackExample";
+import {UseContextExample} from "./components/useContextExample/UseContextExample";
 
 const content = {
     chapter_1:{name:'ClicksForm', component:ClicksForm},
@@ -25,6 +26,7 @@ const content = {
     chapter_9:{name:'PinInput', component:PinInputParent},
     chapter_10:{name:'WithLogRender', component:WithLogRender},
     chapter_11:{name:'UseCallbackExample', component:UseCallbackExample},
+    chapter_13:{name:'UseContextExample', component:UseContextExample},
 }
 
 function App({color}) {
