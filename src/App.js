@@ -14,21 +14,23 @@ import {WithLogRender} from "./components/WithLogRender";
 import {UseCallbackExample} from "./components/UseCallbackExample";
 import {UseContextExample} from "./components/useContextExample/UseContextExample";
 import {UseReducerExample} from "./components/UseReducerExample/UseReducerExample";
+import {UseDebugValueExample} from "./components/useDebugValueExample/UseDebugValueExample";
 
 const content = {
-    chapter_1:{name:'ClicksForm', component:ClicksForm},
-    chapter_2:{name:'ExampleForm', component:ExampleForm},
-    chapter_3:{name:'ClicksCounterOnCustomHook', component:ClicksCounterOnCustomHook},
-    chapter_4:{name:'Calculator', component:Calculator},
-    chapter_5:{name:'CounterWithSideEffect', component:CounterWithSideEffect},
-    chapter_6:{name:'MovingDiv', component:MovingDiv},
-    chapter_7:{name:'UseRefExample', component:UseRefExample},
-    chapter_8:{name:'MemoizedCallback', component:MemoizedCallback},
-    chapter_9:{name:'PinInput', component:PinInputParent},
-    chapter_10:{name:'WithLogRender', component:WithLogRender},
-    chapter_11:{name:'UseCallbackExample', component:UseCallbackExample},
-    chapter_13:{name:'UseContextExample', component:UseContextExample},
-    chapter_14:{name:'UseReducerExample', component:UseReducerExample},
+    chapter_1: {name: 'ClicksForm', component: ClicksForm},
+    chapter_2: {name: 'ExampleForm', component: ExampleForm},
+    chapter_3: {name: 'ClicksCounterOnCustomHook', component: ClicksCounterOnCustomHook},
+    chapter_4: {name: 'Calculator', component: Calculator},
+    chapter_5: {name: 'CounterWithSideEffect', component: CounterWithSideEffect},
+    chapter_6: {name: 'MovingDiv', component: MovingDiv},
+    chapter_7: {name: 'UseRefExample', component: UseRefExample},
+    chapter_8: {name: 'MemoizedCallback', component: MemoizedCallback},
+    chapter_9: {name: 'PinInput', component: PinInputParent},
+    chapter_10: {name: 'WithLogRender', component: WithLogRender},
+    chapter_11: {name: 'UseCallbackExample', component: UseCallbackExample},
+    chapter_13: {name: 'UseContextExample', component: UseContextExample},
+    chapter_14: {name: 'UseReducerExample', component: UseReducerExample},
+    chapter_15: {name: 'UseDebugValueExample', component: UseDebugValueExample},
 }
 
 function App({color}) {
