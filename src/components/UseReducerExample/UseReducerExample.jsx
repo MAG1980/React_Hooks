@@ -1,4 +1,5 @@
 import {useReducer} from "react";
+import {ContactBook} from "./ContactBook/ContactBook";
 
 const initialState = {
     count: 0
@@ -42,12 +43,15 @@ export const UseReducerExample = () => {
     const double = () => dispatch({type: Types.DOUBLE})
     const clear = () => dispatch({type: Types.CLEAR})
     return (
-        <div>
-            <h2>useReducer example</h2>
-            <p>Clicks count: {state.count}</p>
-            <button onClick={increment}>+1 Click</button>
-            <button onClick={double}>Double clicks</button>
-            <button onClick={clear}>Clear</button>
-        </div>
+        <>
+            <div>
+                <h2>useReducer example</h2>
+                <p>Clicks count: {state.count}</p>
+                <button onClick={increment}>+1 Click</button>
+                <button onClick={double}>Double clicks</button>
+                <button onClick={clear}>Clear</button>
+            </div>
+            <ContactBook/>
+        </>
     )
 }
