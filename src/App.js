@@ -15,6 +15,7 @@ import {UseCallbackExample} from "./components/UseCallbackExample";
 import {UseContextExample} from "./components/useContextExample/UseContextExample";
 import {UseReducerExample} from "./components/UseReducerExample/UseReducerExample";
 import {UseDebugValueExample} from "./components/useDebugValueExample/UseDebugValueExample";
+import {HooksFactoryExample} from "./components/hooksFactoryExample/HooksFactoryExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -31,6 +32,7 @@ const content = {
     chapter_13: {name: 'UseContextExample', component: UseContextExample},
     chapter_14: {name: 'UseReducerExample', component: UseReducerExample},
     chapter_15: {name: 'UseDebugValueExample', component: UseDebugValueExample},
+    chapter_16: {name: 'HooksFactoryExample', component: HooksFactoryExample},
 }
 
 function App({color}) {
