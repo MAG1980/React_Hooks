@@ -1,8 +1,9 @@
-import {useToggle} from "../../hooks/useToggle";
+// import {useToggle} from "../../hooks/useToggle";
+import {useToggle2} from "../CustomHooks/useToggle2";
 import {ToggleButton} from "./ToggleButton";
 
 export const SettingsToggle = ({label, initialValue}) => {
-    const [isEnabled, toggleEnabled] = useToggle()
+    const [isEnabled, toggleEnabled] = useToggle2()
     const text = `${label} ${isEnabled ? "disabled" : "enabled"}`
     return (
         <div style={{margin: 10}}>
