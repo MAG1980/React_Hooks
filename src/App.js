@@ -16,6 +16,7 @@ import {UseContextExample} from "./components/useContextExample/UseContextExampl
 import {UseReducerExample} from "./components/UseReducerExample/UseReducerExample";
 import {UseDebugValueExample} from "./components/useDebugValueExample/UseDebugValueExample";
 import {HooksFactoryExample} from "./components/hooksFactoryExample/HooksFactoryExample";
+import {MouseCursorTracking} from "./components/MouseCursorTracking";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -33,6 +34,7 @@ const content = {
     chapter_14: {name: 'UseReducerExample', component: UseReducerExample},
     chapter_15: {name: 'UseDebugValueExample', component: UseDebugValueExample},
     chapter_16: {name: 'HooksFactoryExample', component: HooksFactoryExample},
+    chapter_17: {name: 'MouseCursorTracking', component: MouseCursorTracking},
 }
 
 function App({color}) {
