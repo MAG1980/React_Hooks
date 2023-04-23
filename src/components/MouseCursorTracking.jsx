@@ -15,7 +15,20 @@ export const MouseCursorTracking = () => {
         [],
     );
 
+    //Отслеживание дввижения курсора мыши
     useEventListener('mousemove', onMouseMove)
+
+    const onKeyDown = useCallback(
+        (event) => {
+            if (event.key === 'Backspace') {
+                setCoords([])
+            }
+        },
+        [],
+    );
+
+    //Отслеживание нажатия клавиши Backspace
+    useEventListener('keydown', onKeyDown)
 
     return (
         <>
