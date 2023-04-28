@@ -17,6 +17,7 @@ import {UseReducerExample} from "./components/UseReducerExample/UseReducerExampl
 import {UseDebugValueExample} from "./components/useDebugValueExample/UseDebugValueExample";
 import {HooksFactoryExample} from "./components/hooksFactoryExample/HooksFactoryExample";
 import {MouseCursorTracking} from "./components/MouseCursorTracking";
+import {ComponentRerenderTracking} from "./components/CustomHooks/useWhatCausedRender/ComponentRerenderTracking";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -35,6 +36,7 @@ const content = {
     chapter_15: {name: 'UseDebugValueExample', component: UseDebugValueExample},
     chapter_16: {name: 'HooksFactoryExample', component: HooksFactoryExample},
     chapter_17: {name: 'MouseCursorTracking', component: MouseCursorTracking},
+    chapter_18: {name: 'ComponentRerenderTracking', component: ComponentRerenderTracking},
 }
 
 function App({color}) {
