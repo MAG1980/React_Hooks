@@ -20,4 +20,5 @@ export function useThrottle(value, delay) {
         return clearInterval(intervalHandler)
     }, [delay]);
 
+    return throttledValue
 }
