@@ -2,6 +2,7 @@ import {useCallback, useEffect, useState} from "react";
 import {useDebounce} from "./useDebounce";
 import {useEventListener} from "../useEventListener";
 import {Point} from "./Point";
+import {useThrottle} from "./useThrottle";
 
 const INITIAL_POSITION = {
     clientX: 0,
@@ -10,9 +11,12 @@ const INITIAL_POSITION = {
 export const UseDebounceVsUseThrottle = () => {
     const [lastPos, setLastPos] = useState(INITIAL_POSITION);
     const debouncedPos = useDebounce(lastPos, 300)
+    const throttledPos = useThrottle(lastPos, 300)
+
 
     const [path, setPath] = useState([])
     const [debouncedPath, setDebouncedPath] = useState([])
+    const [throttledPath, setThrottledPath] = useState([]);
 
     //Сохранение в массив всех координат положений мыши
     useEventListener(
@@ -33,6 +37,12 @@ export const UseDebounceVsUseThrottle = () => {
         setDebouncedPath(debouncedPath => [...debouncedPath, debouncedPos])
     }, [debouncedPos]);
 
+    //Добавление в массив координат мыши с Throttle
+    useEffect(() => {
+        setThrottledPath(throttledPath => [...throttledPath, throttledPos])
+    }, [throttledPos]);
+
+
     return (
         <>
             {/*Точки, координаты которых сохранены с debounce, отображаются выше*/}
@@ -40,8 +50,11 @@ export const UseDebounceVsUseThrottle = () => {
             {path.map((pos, index) => (
                 <Point key={index} left={pos.clientX} top={pos.clientY} color="#F88"/>
             ))}
+            {throttledPath.map((pos, index) => (
+                <Point key={index} left={pos.clientX} top={pos.clientY} color="#8F8"/>
+            ))}
             {debouncedPath.map((pos, index) => (
-                <Point key={index} left={pos.clientX} top={pos.clientY} color="#8FF"/>
+                <Point key={index} left={pos.clientX} top={pos.clientY} color="#0000FF"/>
             ))}
         </>
     )

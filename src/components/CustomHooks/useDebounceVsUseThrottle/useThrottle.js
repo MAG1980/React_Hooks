@@ -17,7 +17,7 @@ export function useThrottle(value, delay) {
         }, delay)
 
         //Очистка предыдущего setInterval
-        return clearInterval(intervalHandler)
+        return () => clearInterval(intervalHandler)
     }, [delay]);
 
     return throttledValue
