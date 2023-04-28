@@ -457,6 +457,8 @@ Debounce - отбрасывание всех изменений,
 Применение debounce позволяет получить установившееся значение величины,
 полученное при отсутствии её изменения в течение заданного времени.
 
+Throttle обновляет значения переменной с постоянной частотой.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
