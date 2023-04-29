@@ -21,6 +21,7 @@ import {ComponentRerenderTracking} from "./components/CustomHooks/useWhatCausedR
 import {UseDebounceVsUseThrottle} from "./components/CustomHooks/useDebounceVsUseThrottle/UseDebounceVsUseThrottle";
 import {UseLocalStorageExample} from "./components/CustomHooks/useLocalStorage/UseLocalStorageExample";
 import {UseWindowSizeExample} from "./components/CustomHooks/useWindowSize/UseWindowSizeExample";
+import {UseAsyncExample} from "./components/CustomHooks/useAsync_&_useAnimatedText/UseAsyncExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -43,6 +44,7 @@ const content = {
     chapter_19: {name: 'UseDebounceVsUseThrottle', component: UseDebounceVsUseThrottle},
     chapter_20: {name: 'UseLocalStorageExample', component: UseLocalStorageExample},
     chapter_21: {name: 'UseWindowSizeExample', component: UseWindowSizeExample},
+    chapter_22: {name: 'UseAsyncExample', component: UseAsyncExample},
 }
 
 function App({color}) {
