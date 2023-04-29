@@ -20,6 +20,7 @@ import {MouseCursorTracking} from "./components/MouseCursorTracking";
 import {ComponentRerenderTracking} from "./components/CustomHooks/useWhatCausedRender/ComponentRerenderTracking";
 import {UseDebounceVsUseThrottle} from "./components/CustomHooks/useDebounceVsUseThrottle/UseDebounceVsUseThrottle";
 import {UseLocalStorageExample} from "./components/CustomHooks/useLocalStorage/UseLocalStorageExample";
+import {UseWindowSizeExample} from "./components/CustomHooks/useWindowSize/UseWindowSizeExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -41,6 +42,7 @@ const content = {
     chapter_18: {name: 'ComponentRerenderTracking', component: ComponentRerenderTracking},
     chapter_19: {name: 'UseDebounceVsUseThrottle', component: UseDebounceVsUseThrottle},
     chapter_20: {name: 'UseLocalStorageExample', component: UseLocalStorageExample},
+    chapter_21: {name: 'UseWindowSizeExample', component: UseWindowSizeExample},
 }
 
 function App({color}) {
