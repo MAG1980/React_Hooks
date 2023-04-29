@@ -42,11 +42,18 @@ export function useLocalStorage(key, initialValue) {
         }
     });
 
+    /**
+     * Модифицированный setter
+     * @param newValue
+     */
     const setValue = (newValue) => {
         try {
-            //Если в качестве нового значения передана функция,
-            //то вызываем её с текущим значением, хранящимся в state, переданным в качестве аргумента
+            //Если в качестве аргумента передана функция,
+            //то вызываем её с текущим значением, хранящимся в state (storedValue),
+            // переданным в качестве аргумента
             const evaluated = isFunction(newValue) ? newValue(storedValue) : newValue
+
+            //Сохраняем данные в localStorage
             window.localStorage.setItem(key, JSON.stringify(evaluated))
 
             //Вызываем рендер компонента, получающие данные, возвращаемые хуком
@@ -56,5 +63,7 @@ export function useLocalStorage(key, initialValue) {
         }
     }
 
-    return [storedValue, setStoredValue]
+    //Возвращаем state, содержимое которого соответствует localStorage
+    //с модифицированным сеттером
+    return [storedValue, setValue]
 }
