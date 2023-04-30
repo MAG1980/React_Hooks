@@ -24,6 +24,7 @@ import {UseWindowSizeExample} from "./components/CustomHooks/useWindowSize/UseWi
 import {UseAsyncExample} from "./components/CustomHooks/useAsync_&_useAnimatedText/UseAsyncExample";
 import {UsePreviousExample} from "./components/CustomHooks/usePrevious for RateRow/UsePreviousExample";
 import {UseHistoryExample} from "./components/CustomHooks/useHistory/UseHistoryExample";
+import {UseElementSizeExample} from "./components/CustomHooks/useElementSize/UseElementSizeExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -49,6 +50,7 @@ const content = {
     chapter_22: {name: 'UseAsyncExample', component: UseAsyncExample},
     chapter_23: {name: 'UsePreviousExample', component: UsePreviousExample},
     chapter_24: {name: 'UseHistoryExample', component: UseHistoryExample},
+    chapter_25: {name: 'UseElementSizeExample', component: UseElementSizeExample},
 }
 
 function App({color}) {
