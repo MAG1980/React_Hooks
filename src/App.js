@@ -22,6 +22,7 @@ import {UseDebounceVsUseThrottle} from "./components/CustomHooks/useDebounceVsUs
 import {UseLocalStorageExample} from "./components/CustomHooks/useLocalStorage/UseLocalStorageExample";
 import {UseWindowSizeExample} from "./components/CustomHooks/useWindowSize/UseWindowSizeExample";
 import {UseAsyncExample} from "./components/CustomHooks/useAsync_&_useAnimatedText/UseAsyncExample";
+import {UsePreviousExample} from "./components/CustomHooks/usePrevious for RateRow/UsePreviousExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -45,6 +46,7 @@ const content = {
     chapter_20: {name: 'UseLocalStorageExample', component: UseLocalStorageExample},
     chapter_21: {name: 'UseWindowSizeExample', component: UseWindowSizeExample},
     chapter_22: {name: 'UseAsyncExample', component: UseAsyncExample},
+    chapter_23: {name: 'UsePreviousExample', component: UsePreviousExample},
 }
 
 function App({color}) {
