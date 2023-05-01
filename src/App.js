@@ -26,6 +26,7 @@ import {UsePreviousExample} from "./components/CustomHooks/usePrevious for RateR
 import {UseHistoryExample} from "./components/CustomHooks/useHistory/UseHistoryExample";
 import {UseElementSizeExample} from "./components/CustomHooks/useElementSize/UseElementSizeExample";
 import {UseIntervalExample} from "./components/CustomHooks/useInterval_&_useElementSize/UseIntervalExample";
+import {UseTimeoutExample} from "./components/CustomHooks/useTimeout/UseTimeoutExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -53,6 +54,7 @@ const content = {
     chapter_24: {name: 'UseHistoryExample', component: UseHistoryExample},
     chapter_25: {name: 'UseElementSizeExample', component: UseElementSizeExample},
     chapter_26: {name: 'UseIntervalExample', component: UseIntervalExample},
+    chapter_27: {name: 'UseTimeoutExample', component: UseTimeoutExample},
 }
 
 function App({color}) {
