@@ -27,6 +27,7 @@ import {UseHistoryExample} from "./components/CustomHooks/useHistory/UseHistoryE
 import {UseElementSizeExample} from "./components/CustomHooks/useElementSize/UseElementSizeExample";
 import {UseIntervalExample} from "./components/CustomHooks/useInterval_&_useElementSize/UseIntervalExample";
 import {UseTimeoutExample} from "./components/CustomHooks/useTimeout/UseTimeoutExample";
+import {UseMountedRefExample} from "./components/CustomHooks/useMountedRef/UseMountedRefExample";
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
@@ -55,6 +56,7 @@ const content = {
     chapter_25: {name: 'UseElementSizeExample', component: UseElementSizeExample},
     chapter_26: {name: 'UseIntervalExample', component: UseIntervalExample},
     chapter_27: {name: 'UseTimeoutExample', component: UseTimeoutExample},
+    chapter_28: {name: 'UseMountedRefExample', component: UseMountedRefExample},
 }
 
 function App({color}) {
