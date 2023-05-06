@@ -1,34 +1,36 @@
 import './App.css';
-import {ClicksForm} from "./components/BasicsHooks/ClicksForm";
-import {ExampleForm} from "./components/BasicsHooks/ExampleForm";
-import {ClicksCounterOnCustomHook} from "./components/BasicsHooks/ClicksCounterOnCustomHook"
-import {Calculator} from "./components/BasicsHooks/Calculator";
-import {CounterWithSideEffect} from "./components/BasicsHooks/CounterWithSideEffect";
-import {MovingDiv} from "./components/BasicsHooks/MovingDiv";
-import {UseRefExample} from "./components/BasicsHooks/useRefExample";
-import {MemoizedCallback} from "./components/BasicsHooks/MemoizedCallback";
 import {MasterDetail} from "./components/MasterDetail";
-import {PinInput} from "./components/BasicsHooks/PinInput/PinInput";
-import {PinInputParent} from "./components/BasicsHooks/PinInput/PinInputParent";
-import {WithLogRender} from "./components/BasicsHooks/HOCWithLogRender/WithLogRender";
-import {UseCallbackExample} from "./components/BasicsHooks/UseCallbackExample/UseCallbackExample";
-import {UseContextExample} from "./components/BasicsHooks/useContextExample/UseContextExample";
-import {UseReducerExample} from "./components/BasicsHooks/UseReducerExample/UseReducerExample";
-import {UseDebugValueExample} from "./components/BasicsHooks/useDebugValueExample/UseDebugValueExample";
-import {HooksFactoryExample} from "./components/BasicsHooks/hooksFactoryExample/HooksFactoryExample";
-import {MouseCursorTracking} from "./components/BasicsHooks/MouseCursorTracking";
-import {ComponentRerenderTracking} from "./components/CustomHooks/useWhatCausedRender/ComponentRerenderTracking";
-import {UseDebounceVsUseThrottle} from "./components/CustomHooks/useDebounceVsUseThrottle/UseDebounceVsUseThrottle";
-import {UseLocalStorageExample} from "./components/CustomHooks/useLocalStorage/UseLocalStorageExample";
-import {UseWindowSizeExample} from "./components/CustomHooks/useWindowSize/UseWindowSizeExample";
-import {UseAsyncExample} from "./components/CustomHooks/useAsync_&_useAnimatedText/UseAsyncExample";
-import {UsePreviousExample} from "./components/CustomHooks/usePrevious for RateRow/UsePreviousExample";
-import {UseHistoryExample} from "./components/CustomHooks/useHistory/UseHistoryExample";
-import {UseElementSizeExample} from "./components/CustomHooks/useElementSize/UseElementSizeExample";
-import {UseIntervalExample} from "./components/CustomHooks/useInterval_&_useElementSize/UseIntervalExample";
-import {UseTimeoutExample} from "./components/CustomHooks/useTimeout/UseTimeoutExample";
-import {UseMountedRefExample} from "./components/CustomHooks/useMountedRef/UseMountedRefExample";
-import {UseHoveredExample} from "./components/CustomHooks/useHovered/UseHoveredExample";
+import {
+    Calculator,
+    ClicksCounterOnCustomHook,
+    ClicksForm,
+    ComponentRerenderTracking,
+    CounterWithSideEffect,
+    ExampleForm,
+    HooksFactoryExample,
+    MemoizedCallback,
+    MouseCursorTracking,
+    MovingDiv,
+    PinInputParent,
+    UseAsyncExample,
+    UseCallbackExample,
+    UseContextExample,
+    UseDebounceVsUseThrottle,
+    UseDebugValueExample,
+    UseElementSizeExample,
+    UseHistoryExample,
+    UseHoveredExample,
+    UseIntervalExample,
+    UseLocalStorageExample,
+    UseMountedRefExample,
+    UsePreviousExample,
+    UseReducerExample,
+    UseRefExample,
+    UseTimeoutExample,
+    UseWindowSizeExample,
+    WithLogRender,
+} from "./components/index"
+
 
 const content = {
     chapter_1: {name: 'ClicksForm', component: ClicksForm},
