@@ -1,5 +1,5 @@
 import {SimpleText} from "./SimpleText";
-import {withLogRender} from "../HOC/withLogRender";
+import {withLogRender} from "../../../HOC/withLogRender";
 
 
 export const SimpleTextWithLogRender = () => {

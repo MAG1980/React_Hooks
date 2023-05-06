@@ -1,5 +1,5 @@
 import {useCallback, useState} from "react";
-import {useEventListener} from "./CustomHooks/useEventListener";
+import {useEventListener} from "../CustomHooks/useEventListener";
 
 export const MouseCursorTracking = () => {
     const [coords, setCoords] = useState([]);

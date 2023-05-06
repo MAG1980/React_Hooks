@@ -1,4 +1,4 @@
-import {useMergedState} from "../hooks/useMergedState";
+import {useMergedState} from "../CustomHooks/useMergedState";
 
 const initState = {
     name: '',
@@ -33,7 +33,7 @@ export const ExampleForm = () => {
                     value={mergedState.name}
                     onChange={(event) => {
                         console.log(event.target.value)
-                        mergeState({name:event.target.value})
+                        mergeState({name: event.target.value})
                         console.log(mergedState)
                     }}
                 />

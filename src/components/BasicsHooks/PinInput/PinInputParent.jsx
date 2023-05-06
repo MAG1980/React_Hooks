@@ -1,5 +1,5 @@
 import PinInput from "./PinInput";
-import {useState, useRef} from "react";
+import {useRef, useState} from "react";
 
 const initialDigits = ['', '', '', '', '']
 
@@ -16,9 +16,9 @@ export const PinInputParent = () => {
     }
     return (
         <>
-           {/* Передаём ссылку на ref как обычный props,
+            {/* Передаём ссылку на ref как обычный props,
             но получаем его отдельным параметром, следующим после объекта props.*/}
-            <PinInput ref={ref} digits={digits} onChange={setDigits}  />
+            <PinInput ref={ref} digits={digits} onChange={setDigits}/>
             <p>
                 <button onClick={focus}>Focus on first digit</button>
                 <button onClick={clearDigits}>Clear digits</button>

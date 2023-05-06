@@ -1,5 +1,5 @@
 // import {useToggle} from "../../hooks/useToggle";
-import {useToggle2} from "../CustomHooks/useToggle2";
+import {useToggle2} from "../../CustomHooks/useToggle2";
 import {ToggleButton} from "./ToggleButton";
 
 export const SettingsToggle = ({label, initialValue}) => {

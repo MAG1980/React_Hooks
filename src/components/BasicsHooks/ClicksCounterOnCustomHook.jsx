@@ -1,4 +1,4 @@
-import {useCounter} from "../hooks/useCounter";
+import {useCounter} from "../CustomHooks/useCounter";
 
 const delta = 3
 export const ClicksCounterOnCustomHook = ({initValue, delta}) => {
@@ -12,7 +12,7 @@ export const ClicksCounterOnCustomHook = ({initValue, delta}) => {
             </button>
             <button
                 type="button"
-                onClick={()=>decrement()}>Отнять
+                onClick={() => decrement()}>Отнять
             </button>
         </form>
     )

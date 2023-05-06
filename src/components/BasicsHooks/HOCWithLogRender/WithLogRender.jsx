@@ -1,7 +1,7 @@
 import {useRef, useState} from "react";
 import {SimpleTextWithLogRender} from "./SimpleTextWithLogRender";
-import {withLogRender} from "../HOC/withLogRender";
-import PinInput from "./PinInput";
+import {withLogRender} from "../../../HOC/withLogRender";
+import PinInput from "../PinInput/PinInput";
 
 const PinInputWithLogRender = withLogRender(PinInput)
 export const WithLogRender = () => {

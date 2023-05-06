@@ -1,5 +1,5 @@
 import {useReducer} from "react";
-import {initialState} from "../UseReducerExample/ContactBook/ContactsContent";
+import {initialState} from "../BasicsHooks/UseReducerExample/ContactBook/ContactsContent";
 
 /**
  * Хук для удобного хранения и изменения значения типа Boolean

@@ -1,6 +1,6 @@
-import {useEffect,useCallback} from 'react';
-import {useCounter} from "../hooks/useCounter";
-import {useUpdateEffect} from "../hooks/useUpdateEffect"
+import {useCallback, useEffect} from 'react';
+import {useCounter} from "../CustomHooks/useCounter";
+import {useUpdateEffect} from "../CustomHooks/useUpdateEffect"
 
 export const MemoizedCallback = () => {
     const [value, increment] = useCounter(0, 1)
@@ -22,7 +22,7 @@ export const MemoizedCallback = () => {
 
     //memoizedCallback выполняется каждый раз при изменении ссылки на него, кроме первого рендера.
     useUpdateEffect(memoizedCallback)
-    
+
     return (
         <>
             <button onClick={increment}>Rerender</button>

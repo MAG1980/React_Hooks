@@ -6,7 +6,6 @@ export const UseRefExample = () => {
     const [toggledState, setToggledState] = useState(false);
 
     const focusInput = () => {
-        console.log(refContainer.current)
         //? - проверка на null и undefined
         refContainer.current?.focus()
     }

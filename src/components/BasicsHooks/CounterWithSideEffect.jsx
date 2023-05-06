@@ -1,6 +1,5 @@
-import {useCounter} from "../hooks/useCounter";
+import {useCounter} from "../CustomHooks/useCounter";
 import {useEffect} from "react";
-import {logDOM} from "@testing-library/react";
 
 //Имитирует асинхронный ответ сервера
 const updateClicksCount = (clicksCount) => {
@@ -32,16 +31,16 @@ export const CounterWithSideEffect = () => {
     }, [counter])
 
     //useEffect с функцией очистки
-    useEffect(()=>{
+    useEffect(() => {
         console.log(`>> running effect ${counter}`)
-        return ()=> {
+        return () => {
             //cleanUp-function
             console.log(`<< cleaning up ${counter}`)
         }
-    },[counter])
+    }, [counter])
 
-        //Выполняется после каждого рендера, т.к. отсутствует массив зависимостей
-    useEffect(()=>{
+    //Выполняется после каждого рендера, т.к. отсутствует массив зависимостей
+    useEffect(() => {
         console.log("Executed after EACH render!")
     })
     return (

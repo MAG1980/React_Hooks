@@ -1,5 +1,5 @@
-import {usePosition} from "../hooks/usePosition";
-import {useState, useLayoutEffect, useMemo} from "react";
+import {usePosition} from "../CustomHooks/usePosition";
+import {useMemo} from "react";
 
 const initialStyle = {
     backgroundColor: '#F00',
@@ -33,19 +33,19 @@ export const MovingDiv = () => {
         }
     }, [left, top]);
 
-/*    useLayoutEffect(() => {
-        setStyle((prevState) => {
-                return {
-                    ...prevState,
-                    left,
-                    top
+    /*    useLayoutEffect(() => {
+            setStyle((prevState) => {
+                    return {
+                        ...prevState,
+                        left,
+                        top
+                    }
                 }
-            }
-        )
-        return () => {
+            )
+            return () => {
 
-        };
-    }, [left, top]);*/
+            };
+        }, [left, top]);*/
 
 
     return (
