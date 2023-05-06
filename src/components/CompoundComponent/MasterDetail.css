@@ -6,15 +6,19 @@ div {
     position: absolute;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto 20%;
 }
 
 .master {
+    grid-column: 1;
+    grid-row: 1/3;
     padding: 10px;
     border-right: #bbbbbb solid 2px;
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .master-expand-container {
@@ -46,12 +50,9 @@ div {
 }
 
 .section {
-    padding-top: 10;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-    cursor: pointer;
+    text-align: left;
+    padding-top: 10px;
+    font-family: Arial;
 }
 
 .section:hover {
@@ -66,6 +67,20 @@ div {
     padding-left: 10px;
 }
 
+.section-button {
+    background-color: #fff;
+    border: #bbbbbb solid 2px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 3px 3px #eeeeee;
+}
+
+.section-content {
+    padding-left: 10px;
+}
+
 .master-button {
     background-color: #fff;
     border: #bbbbbb solid 2px;
@@ -73,7 +88,7 @@ div {
     width: 100%;
     padding: 10px;
     box-shadow: 3px 3px #eeeeee;
-    text-align: start;
+    /*text-align: start;*/
     cursor: pointer;
 }
 

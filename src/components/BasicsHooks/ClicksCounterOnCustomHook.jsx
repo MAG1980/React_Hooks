@@ -1,6 +1,6 @@
 import {useCounter} from "../CustomHooks/useCounter";
 
-const delta = 3
+
 export const ClicksCounterOnCustomHook = ({initValue, delta}) => {
     const [counter, increment, decrement] = useCounter(initValue, delta)
     return (

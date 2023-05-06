@@ -1,5 +1,5 @@
 import './App.css';
-import {MasterDetail} from "./components/MasterDetail";
+import {MasterDetail} from "./components/CompoundComponent/MasterDetail";
 import {
     Calculator,
     ClicksCounterOnCustomHook,
@@ -30,55 +30,63 @@ import {
     UseWindowSizeExample,
     WithLogRender,
 } from "./components/index"
-
-
-const content = {
-    chapter_1: {name: 'ClicksForm', component: ClicksForm},
-    chapter_2: {name: 'ExampleForm', component: ExampleForm},
-    chapter_3: {name: 'ClicksCounterOnCustomHook', component: ClicksCounterOnCustomHook},
-    chapter_4: {name: 'Calculator', component: Calculator},
-    chapter_5: {name: 'CounterWithSideEffect', component: CounterWithSideEffect},
-    chapter_6: {name: 'MovingDiv', component: MovingDiv},
-    chapter_7: {name: 'UseRefExample', component: UseRefExample},
-    chapter_8: {name: 'MemoizedCallback', component: MemoizedCallback},
-    chapter_9: {name: 'PinInput', component: PinInputParent},
-    chapter_10: {name: 'WithLogRender', component: WithLogRender},
-    chapter_11: {name: 'UseCallbackExample', component: UseCallbackExample},
-    chapter_13: {name: 'UseContextExample', component: UseContextExample},
-    chapter_14: {name: 'UseReducerExample', component: UseReducerExample},
-    chapter_15: {name: 'UseDebugValueExample', component: UseDebugValueExample},
-    chapter_16: {name: 'HooksFactoryExample', component: HooksFactoryExample},
-    chapter_17: {name: 'MouseCursorTracking', component: MouseCursorTracking},
-    chapter_18: {name: 'ComponentRerenderTracking', component: ComponentRerenderTracking},
-    chapter_19: {name: 'UseDebounceVsUseThrottle', component: UseDebounceVsUseThrottle},
-    chapter_20: {name: 'UseLocalStorageExample', component: UseLocalStorageExample},
-    chapter_21: {name: 'UseWindowSizeExample', component: UseWindowSizeExample},
-    chapter_22: {name: 'UseAsyncExample', component: UseAsyncExample},
-    chapter_23: {name: 'UsePreviousExample', component: UsePreviousExample},
-    chapter_24: {name: 'UseHistoryExample', component: UseHistoryExample},
-    chapter_25: {name: 'UseElementSizeExample', component: UseElementSizeExample},
-    chapter_26: {name: 'UseIntervalExample', component: UseIntervalExample},
-    chapter_27: {name: 'UseTimeoutExample', component: UseTimeoutExample},
-    chapter_28: {name: 'UseMountedRefExample', component: UseMountedRefExample},
-    chapter_29: {name: 'UseHoveredExample', component: UseHoveredExample},
-}
+import {Section} from "./components/CompoundComponent/Section";
+import {Chapter} from "./components/CompoundComponent/Chapter";
 
 function App({color}) {
     const BLUE = "blue"
     console.log(color, BLUE)
     return (
         <div className="App">
-            {/*            <header className="App-header">
-                <h1  style={{color}}>Title</h1>
-                <img src={logo} className="App-logo" alt="logo"/>
-                <HelloWorld color={BLUE}/>
-                <Label color="red ">
-                    <p>Введите текст</p>
-                    <input/>
-                </Label>
-            </header>*/}
+            <MasterDetail>
+                <Section title="Basic hooks, useState">
+                    <Chapter title="ClicksForm" component={ClicksForm}/>
+                    <Chapter title="ExampleForm" component={ExampleForm}/>
+                    {/*Чтобы передать props в компонент, пришлось обернут его в callback*/}
+                    <Chapter title="ClicksCounterOnCustomHook"
+                             component={() => ClicksCounterOnCustomHook({initValue: 50, delta: 7})}/>
+                    <Chapter title="Calculator" component={Calculator}/>
+                    <Section title="Example">
+                        example
+                    </Section>
 
-            <MasterDetail content={content}/>
+                </Section>
+
+                <Section title="Side effects, useEffect, useLayoutEffect">
+                    <Chapter title="CounterWithSideEffect" component={CounterWithSideEffect}/>
+                    <Chapter title="useLayoutEffect (MovingDiv)" component={MovingDiv}/>
+                </Section>
+
+                <Section title="Imperative code, useRef">
+                    <Chapter title="UseRefExample" component={UseRefExample}/>
+                    <Chapter title="MemoizedCallback" component={MemoizedCallback}/>
+                    <Chapter title="PinInputParent" component={PinInputParent}/>
+                    <Chapter title="HOC withLogRender" component={WithLogRender}/>
+                </Section>
+
+                <Section title="Advanced hooks and concepts">
+                    <Chapter title="UseCallbackExample" component={UseCallbackExample}/>
+                    <Chapter title="UseContextExample" component={UseContextExample}/>
+                    <Chapter title="UseReducerExample" component={UseReducerExample}/>
+                    <Chapter title="UseDebugValueExample" component={UseDebugValueExample}/>
+                    <Chapter title="HooksFactoryExample" component={HooksFactoryExample}/>
+                </Section>
+                <Section title="Custom hooks collection">
+                    <Chapter title="MouseCursorTracking" component={MouseCursorTracking}/>
+                    <Chapter title="ComponentRerenderTracking" component={ComponentRerenderTracking}/>
+                    <Chapter title="UseDebounceVsUseThrottle" component={UseDebounceVsUseThrottle}/>
+                    <Chapter title="UseLocalStorageExample" component={UseLocalStorageExample}/>
+                    <Chapter title="UseWindowSizeExample" component={UseWindowSizeExample}/>
+                    <Chapter title="UseAsyncExample" component={UseAsyncExample}/>
+                    <Chapter title="UsePreviousExample" component={UsePreviousExample}/>
+                    <Chapter title="UseHistoryExample" component={UseHistoryExample}/>
+                    <Chapter title="UseElementSizeExample" component={UseElementSizeExample}/>
+                    <Chapter title="UseIntervalExample" component={UseIntervalExample}/>
+                    <Chapter title="UseTimeoutExample" component={UseTimeoutExample}/>
+                    <Chapter title="UseMountedRefExample" component={UseMountedRefExample}/>
+                    <Chapter title="UseHoveredExample" component={UseHoveredExample}/>
+                </Section>
+            </MasterDetail>
         </div>
     );
 }
