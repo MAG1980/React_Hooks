@@ -26,6 +26,7 @@ import {UseIntervalExample} from "./CustomHooks/useInterval_&_useElementSize/Use
 import {UseTimeoutExample} from "./CustomHooks/useTimeout/UseTimeoutExample";
 import {UseMountedRefExample} from "./CustomHooks/useMountedRef/UseMountedRefExample";
 import {UseHoveredExample} from "./CustomHooks/useHovered/UseHoveredExample";
+import {UsingContext} from "./DataFetching/UsingContext"
 
 export {
     ClicksForm,
@@ -56,5 +57,6 @@ export {
     UseTimeoutExample,
     UseMountedRefExample,
     UseHoveredExample,
+    UsingContext
 }
 

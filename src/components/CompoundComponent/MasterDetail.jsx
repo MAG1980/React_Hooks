@@ -1,6 +1,5 @@
 import {createContext, useEffect, useState} from "react";
 import "./MasterDetail.css"
-import {ConsoleViewer} from "../ConsoleViewer/ConsoleViewer";
 import {MasterDetailContextProvider} from "./MasterDetailContextProvider";
 
 /**
@@ -54,7 +53,7 @@ export const MasterDetail = ({children}) => {
 
             <div className="detail">{DetailComponent && <DetailComponent/>}</div>
             <div className="bottom">
-                <ConsoleViewer/>
+                {/*<ConsoleViewer/>*/}
             </div>
         </div>)
 }

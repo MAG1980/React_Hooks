@@ -28,6 +28,7 @@ import {
     UseRefExample,
     UseTimeoutExample,
     UseWindowSizeExample,
+    UsingContext,
     WithLogRender,
 } from "./components/index"
 import {Section} from "./components/CompoundComponent/Section";
@@ -85,6 +86,9 @@ function App({color}) {
                     <Chapter title="UseTimeoutExample" component={UseTimeoutExample}/>
                     <Chapter title="UseMountedRefExample" component={UseMountedRefExample}/>
                     <Chapter title="UseHoveredExample" component={UseHoveredExample}/>
+                </Section>
+                <Section title="Data fetching">
+                    <Chapter title="Axios & useContext" component={UsingContext}/>
                 </Section>
             </MasterDetail>
         </div>

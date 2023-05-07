@@ -1,7 +1,7 @@
 import "./index.css"
-import {useUserContext} from "../UserContext";
+import {useUserContext} from "../hooks/useUserContext";
 
-export function Avatar() {
+export function Index() {
     const {data} = useUserContext()
     //Формируем строку, содержащую первые буквы слов, входящих в строку name
     const initials = data.name
