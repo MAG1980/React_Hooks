@@ -11,7 +11,9 @@ const axiosInstance = axios.create({
  * @return {Promise<any>}
  */
 export async function queryFunction(query) {
+    // console.log(query)
+    const response = await axiosInstance.get(query)
     //Деструктуризация response
-    const {data} = await axiosInstance.get(query)
+    const {data} = response
     return data
 }

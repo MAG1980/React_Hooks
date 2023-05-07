@@ -10,11 +10,16 @@ import {queryFunction} from "../api";
 export function useRequest(query) {
     const [data, setData] = useState()
     const [error, setError] = useState()
-    console.log(query)
-    useEffect((query) => {
-        console.log(query)
+
+    //Если передать query в callback эффекта,
+    // то вместо query queryFunction(query) получит undefined
+    useEffect(() => {
+        // console.log(query)
         queryFunction(query)
-            .then(data => setData(data))
+            .then(data => {
+                // console.log(data)
+                setData(data)
+            })
             .catch(error => setError(error))
     }, [query]);
 

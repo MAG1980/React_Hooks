@@ -1,6 +1,7 @@
 import {createContext, useEffect, useState} from "react";
 import "./MasterDetail.css"
 import {MasterDetailContextProvider} from "./MasterDetailContextProvider";
+import {ConsoleViewer} from "../ConsoleViewer/ConsoleViewer";
 
 /**
  * Рендеринг пунктов меню (примеров или глав)
@@ -53,7 +54,7 @@ export const MasterDetail = ({children}) => {
 
             <div className="detail">{DetailComponent && <DetailComponent/>}</div>
             <div className="bottom">
-                {/*<ConsoleViewer/>*/}
+                <ConsoleViewer/>
             </div>
         </div>)
 }
