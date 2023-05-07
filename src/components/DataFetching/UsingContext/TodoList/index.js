@@ -1,5 +1,5 @@
 import './index.css';
-import {useTodoListContext} from "../hooks/useTodoListContext";
+import {useAppContext} from "../hooks/useAppContext";
 
 function TodoRow({number, data}) {
     const {title, completed} = data;
@@ -13,8 +13,10 @@ function TodoRow({number, data}) {
 }
 
 export function TodoList() {
-    const {loading, data} = useTodoListContext();
-    const todos = loading ? [] : data;
+    // const {loading, data} = useTodoListContext();
+    const {loading, todoList} = useAppContext();
+    // const todos = loading ? [] : data;
+    const todos = loading ? [] : todoList;
 
     return (
         <div className="todo-list">

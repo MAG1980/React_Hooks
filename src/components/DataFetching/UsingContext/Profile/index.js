@@ -1,10 +1,11 @@
-import {useUserContext} from "../hooks/useUserContext";
 import "./index.css"
 import {ProfileRow} from "./ProfileRow";
+import {useAppContext} from "../hooks/useAppContext";
 
 
 export const Profile = () => {
-    const {loading, data, error} = useUserContext()
+    // const {loading, data, error} = useUserContext()
+    const {loading, user, error} = useAppContext()
 
     if (loading) {
         return <div className="profile">Loading...</div>
@@ -19,7 +20,8 @@ export const Profile = () => {
     }
 
     //Деструктуризация данных, полученных из контекста
-    const {name, email, phone, website, company} = data
+    // const {name, email, phone, website, company} = data
+    const {name, email, phone, website, company} = user
 
     return (
         <div className="profile">

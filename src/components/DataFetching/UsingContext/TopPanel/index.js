@@ -1,17 +1,18 @@
 import {Index} from "../Avatar";
-import {useUserContext} from "../hooks/useUserContext";
 import "./index.css"
+import {useAppContext} from "../hooks/useAppContext";
 
 export const TopPanel = () => {
-    const {loading, data} = useUserContext()
-    console.log(loading, data)
+    // const {loading, data} = useUserContext()
+    const {loading, user} = useAppContext()
+    console.log(loading, user)
     if (loading) {
         return <div className="top-panel">Loading...</div>
     }
     return (
         <div className="top-panel">
             <Index/>
-            <span>{data.name}</span>
+            <span>{user.name}</span>
         </div>
     )
 }
