@@ -1,0 +1,22 @@
+.swr-top-panel {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px dashed #bbbbbb;
+    padding-left: 10px;
+}
+
+.swr-top-panel .avatar-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.swr-top-panel .user-name-container {
+    flex: 1;
+}
+
+.swr-top-panel .widget-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}

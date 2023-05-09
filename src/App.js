@@ -29,7 +29,8 @@ import {
     UseTimeoutExample,
     UseWindowSizeExample,
     UsingContext,
-    WithLogRender,
+    UsingSWR,
+    WithLogRender
 } from "./components/index"
 import {Section} from "./components/CompoundComponent/Section";
 import {Chapter} from "./components/CompoundComponent/Chapter";
@@ -89,6 +90,7 @@ function App({color}) {
                 </Section>
                 <Section title="Data fetching">
                     <Chapter title="Axios & useContext" component={UsingContext}/>
+                    <Chapter title="Using SWR" component={UsingSWR}/>
                 </Section>
             </MasterDetail>
         </div>

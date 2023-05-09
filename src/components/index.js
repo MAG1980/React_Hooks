@@ -27,6 +27,7 @@ import {UseTimeoutExample} from "./CustomHooks/useTimeout/UseTimeoutExample";
 import {UseMountedRefExample} from "./CustomHooks/useMountedRef/UseMountedRefExample";
 import {UseHoveredExample} from "./CustomHooks/useHovered/UseHoveredExample";
 import {UsingContext} from "./DataFetching/UsingContext"
+import {UsingSWR} from "./DataFetching/UsingSWR"
 
 export {
     ClicksForm,
@@ -57,6 +58,7 @@ export {
     UseTimeoutExample,
     UseMountedRefExample,
     UseHoveredExample,
-    UsingContext
+    UsingContext,
+    UsingSWR,
 }
 
