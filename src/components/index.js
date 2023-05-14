@@ -28,6 +28,8 @@ import {UseMountedRefExample} from "./CustomHooks/useMountedRef/UseMountedRefExa
 import {UseHoveredExample} from "./CustomHooks/useHovered/UseHoveredExample";
 import {UsingContext} from "./DataFetching/UsingContext"
 import {UsingSWR} from "./DataFetching/UsingSWR"
+import {UsingReactQuery} from "./DataFetching/UsingReactQuery"
+
 
 export {
     ClicksForm,
@@ -60,5 +62,6 @@ export {
     UseHoveredExample,
     UsingContext,
     UsingSWR,
+    UsingReactQuery,
 }
 
